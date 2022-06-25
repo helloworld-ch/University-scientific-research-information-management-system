@@ -1,0 +1,24 @@
+server:
+  port: 7232
+spring:
+  # ???
+  application:
+    name: service-edu
+
+  # ?????dev?test?prod
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/usrims?characterEncoding=utf8&useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: "030428"
+  #??json???????
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
+
+  #mybatis??
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
